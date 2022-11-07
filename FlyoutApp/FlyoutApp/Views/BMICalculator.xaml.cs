@@ -17,7 +17,7 @@ namespace FlyoutApp.Views
             InitializeComponent();
         }
 
-        void Bmi_Btn_Clicked(object sender, System.EventArgs e)
+        async void Bmi_Btn_Clicked(object sender, System.EventArgs e)
         {
             if (String.IsNullOrEmpty(Inp_height.Text) || String.IsNullOrEmpty(Inp_weight.Text))
             {
@@ -25,6 +25,7 @@ namespace FlyoutApp.Views
             }
             else
             {
+                await DisplayAlert("Calculating...", "We are calculating your BMI Now", "Show Me");
                 int height = Int32.Parse(Inp_height.Text);
                 double weight = Int32.Parse(Inp_weight.Text);
 
